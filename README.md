@@ -20,7 +20,7 @@ Play the game on:
 
 ## Inspiration
 
-- [Friday Night Funkin'](Friday Night Funkin)
+- [Friday Night Funkin'](https://friday-nightfunkin.io/)
 - [Guitar Hero](https://wikipedia.org/wiki/Guitar_Hero)
 
 ## Ideation
