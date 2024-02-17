@@ -1,5 +1,5 @@
 {
-  "name": "kaboom-template",
+  "name": "rhythmism",
   "version": "1.0.0-alpha",
   "description": "A template for building Kaboom games.",
   "author": "Mark <mark@remarkablemark.org>",
@@ -14,7 +14,7 @@
     "preview": "vite preview",
     "start": "vite --open"
   },
-  "homepage": "https://remarkablegames.org/kaboom-template/",
+  "homepage": "https://remarkablegames.org/rhythmism/",
   "dependencies": {
     "kaboom": "3000.1.17"
   },

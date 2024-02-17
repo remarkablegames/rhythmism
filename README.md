@@ -1,6 +1,6 @@
-# kaboom-template
+# rhythmism
 
-<kbd>kaboom-template</kbd> is a template for making [Kaboom](https://kaboomjs.com/) games. See [example](https://remarkablegames.org/kaboom-template).
+🎶 Rhythmism is a web rhythm game.
 
 ## Stack
 
@@ -17,8 +17,8 @@
 Clone the repository:
 
 ```sh
-git clone https://github.com/remarkablegames/kaboom-template.git
-cd kaboom-template
+git clone https://github.com/remarkablegames/rhythmism.git
+cd rhythmism
 ```
 
 Use the Node.js version:
