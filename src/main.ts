@@ -1,4 +1,5 @@
 import 'kaboom/global';
+import './style.css';
 import './scenes';
 
 import { Scene } from './constants';
