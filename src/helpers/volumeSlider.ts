@@ -1,4 +1,4 @@
-import { Sound } from '../constants';
+import type { AudioPlay } from 'kaboom';
 
 /*---------------------
 Current issues to fix
@@ -9,13 +9,7 @@ Possible update:
   - Move volume to pause screen
 ----------------------*/
 
-export function volumeSlider() {
-  // load track
-  // loadSound("song", "sounds/song.mp3")
-
-  // set music
-  const music = play(Sound.music);
-
+export function volumeSlider(music: AudioPlay) {
   // Volume level label above volume slider
   const percentNumberLabel = add([
     text('Volume:100', {
@@ -48,7 +42,6 @@ export function volumeSlider() {
     isDragging = false;
   });
 
-  //
   onMouseMove(() => {
     if (isDragging) {
       // Allows the slider to work

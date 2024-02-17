@@ -30,14 +30,13 @@ scene(Scene.game, (levelId: string) => {
     volume: level.volume,
   });
 
-  music.volume;
   music.onEnd(() => {
     go(Scene.start);
   });
 
   music.paused = true;
 
-  volumeSlider();
+  volumeSlider(music);
   addKeys();
   addTimer();
 
