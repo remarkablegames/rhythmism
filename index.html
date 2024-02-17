@@ -43,8 +43,12 @@
   <body>
     <noscript>You need to enable JavaScript to play this game.</noscript>
     <script type="module">
-      import kaboom from 'kaboom'
-      kaboom()
+      import kaboom from 'kaboom';
+
+      kaboom({
+        width: 360,
+        height: 480,
+      });
     </script>
     <script type="module" src="src/main.ts"></script>
 
