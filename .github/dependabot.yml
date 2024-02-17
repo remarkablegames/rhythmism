@@ -5,12 +5,20 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
+    groups:
+      prettier:
+        patterns:
+          - prettier
+          - eslint-plugin-prettier
+      typescript-eslint:
+        patterns:
+          - '@typescript-eslint/*'
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
