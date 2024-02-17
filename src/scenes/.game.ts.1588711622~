@@ -1,0 +1,37 @@
+import { Scene, Sound, Tag, directions } from '../constants';
+import { addKeys } from '../gameobjects';
+import { getPosition } from '../helpers';
+import { levels } from '../levels';
+
+scene(Scene.game, () => {
+  addKeys();
+  const level = levels.sinbad;
+
+  try {
+    loadSound(Sound.music, level.music[0]);
+  } catch (error) {
+    loadSound(Sound.music, level.music[1]);
+  }
+
+  level.keys.forEach(({ key, time }) => {
+    wait(time, () => {
+      add([
+        sprite(direction),
+        getPosition(direction, -60),
+        move(DOWN, 250),
+        area(),
+        offscreen({ destroy: true }),
+        Tag.direction,
+      ]);
+    });
+  });
+
+  play(Sound.music);
+
+  /*
+  loop(1, () => {
+    const direction = directions[randi(4)];
+
+  });
+  */
+});
