@@ -38,10 +38,26 @@
     <title>Rhythmism | remarkablegames</title>
   </head>
   <body>
+    <noscript>You need to enable JavaScript to play this game.</noscript>
     <script type="module">
       import kaboom from 'kaboom'
       kaboom()
     </script>
     <script type="module" src="src/index.ts"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+      window['ga-disable-%VITE_GOOGLE_ANALYTICS_ID%'] = %DEV%;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        dataLayer.push(arguments);
+      };
+      gtag('js', new Date());
+      gtag('config', '%VITE_GOOGLE_ANALYTICS_ID%');
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=%VITE_GOOGLE_ANALYTICS_ID%"
+    ></script>
   </body>
 </html>
