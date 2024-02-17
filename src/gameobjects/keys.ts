@@ -6,6 +6,8 @@ import { addScore } from './score';
 
 const LONG_PRESS_MILLISECONDS = 500;
 
+loadSprite('star', 'sprites/star.png');
+
 export function addKeys() {
   const keyMap = {
     left: add([
@@ -51,7 +53,12 @@ export function addKeys() {
   (directions as DirectionKey[]).forEach((key) => {
     onCollideUpdate(key, Tag.direction, () => {
       if (isKeyPressed(key)) {
-        addKaboom(center());
+        add([
+          sprite('star'),
+          pos(70, 70),
+          scale(0.4),
+          lifespan(0.09, { fade: 0.5 }),
+        ]);
         incrementScore();
       }
     });
