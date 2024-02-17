@@ -2,11 +2,34 @@
 
 🎶 Rhythmism is a web rhythm game.
 
+The game was made for the [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), which the theme was `Divergence`.
+
+Play the game on:
+
+- [remarkablegames](https://remarkablegames.org/rhythmism/)
+
+## Credits
+
+- [remarkablemark](https://github.com/remarkablemark) - Programmer, UI
+- [Rob Cohen](https://github.com/rmacohen) - Programmer, UI
+- [SG-SWE073](https://github.com/SG-SWE073) - Programmer, UI, Art
+- [Gina Castromonte](https://github.com/GinaCastromonte) - Programmer
+- [emex](https://soundcloud.com/emex-music) - Music
+
+## Inspiration
+
+- [Friday Night Funkin'](Friday Night Funkin)
+- [Guitar Hero](https://wikipedia.org/wiki/Guitar_Hero)
+
+## Ideation
+
+- [Excalidraw](https://excalidraw.com/#json=4xsd2WQeFiejrdBQkalCR,GLv9eoVsLsWhkXYKI1gCLA)
+- [Prototype 1](https://replit.com/@remarkablemark/Rhythm-Game)
+
 ## Stack
 
 - [Kaboom](https://kaboomjs.com/)
 - [Vite](https://vitejs.dev/)
-- [GitHub Pages](https://pages.github.com/)
 
 ## Prerequisites
 
