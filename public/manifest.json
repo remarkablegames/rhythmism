@@ -1,0 +1,15 @@
+{
+  "short_name": "Kaboom Template",
+  "name": "Kaboom Template",
+  "icons": [
+    {
+      "src": "kaboom.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
