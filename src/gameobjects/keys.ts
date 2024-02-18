@@ -15,6 +15,16 @@ export function addKeys() {
         incrementScore();
       }
     });
+
+    onMousePress('left', () => {
+      if (keyObject.isClicked()) {
+        handlePress(key as DirectionKey);
+      }
+    });
+
+    onMouseRelease(() => {
+      handleRelease(key as DirectionKey);
+    });
   });
 
   onKeyPress(handlePress);
@@ -77,5 +87,5 @@ function addKeyObjects() {
       opacity(0.5),
       Tag.right,
     ]),
-  };
+  } as const;
 }
