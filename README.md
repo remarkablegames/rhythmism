@@ -16,6 +16,7 @@ The game was made for the [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024)
 Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/rhythmism/)
+- [Itch.io](https://remarkablegames.itch.io/rhythmism)
 
 ## Credits
 
