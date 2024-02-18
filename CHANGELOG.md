@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/remarkablegames/rhythmism/compare/v1.0.2...v1.1.0) (2024-02-18)
+
+
+### Features
+
+* **gameobjects:** add touch support to keys ([4c0cc9a](https://github.com/remarkablegames/rhythmism/commit/4c0cc9a7e6b7a3ee9b529da6ec007e3423026680))
+
 ## [1.0.2](https://github.com/remarkablegames/rhythmism/compare/v1.0.1...v1.0.2) (2024-02-18)
 
 
