@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/remarkablegames/rhythmism/compare/v1.0.1...v1.0.2) (2024-02-18)
+
+
+### Bug Fixes
+
+* **helpers:** center position of keys ([023566a](https://github.com/remarkablegames/rhythmism/commit/023566a660618995a2ea983b4e4f1696adf2cbc5))
+
 ## [1.0.1](https://github.com/remarkablegames/rhythmism/compare/v1.0.0...v1.0.1) (2024-02-18)
 
 
