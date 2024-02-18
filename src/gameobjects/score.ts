@@ -1,11 +1,15 @@
+import type { GameObj, TextComp } from 'kaboom';
+
+let score: GameObj<TextComp>;
+
 export function addScore() {
-  const scoreDisplay = add([
+  score = add([
     text('0', { size: 32 }),
     pos(center().x, 5),
     color(255, 255, 255),
   ]);
+}
 
-  return (incrementBy = 1) => {
-    scoreDisplay.text = String(parseInt(scoreDisplay.text) + incrementBy);
-  };
+export function incrementScore(increment = 1) {
+  score.text = String(parseInt(score.text) + increment);
 }

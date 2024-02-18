@@ -6,7 +6,7 @@ import {
   Sprite,
   Tag,
 } from '../constants';
-import { addKeys, addPause, addTimer } from '../gameobjects';
+import { addKeys, addPause, addScore, addTimer } from '../gameobjects';
 import { getPosition } from '../helpers';
 import { volumeSlider } from '../helpers/volumeSlider';
 import { levels } from '../levels';
@@ -34,6 +34,7 @@ scene(Scene.game, (levelId: string) => {
 
   music.paused = true;
 
+  addScore();
   volumeSlider(music, level.volume);
   addKeys();
   addTimer();

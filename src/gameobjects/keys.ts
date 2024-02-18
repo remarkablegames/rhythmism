@@ -2,7 +2,7 @@ import type { AudioPlay } from 'kaboom';
 
 import { DirectionKey, directions, Key, Sound, Tag } from '../constants';
 import { getPosition } from '../helpers';
-import { addScore } from './score';
+import { incrementScore } from './score';
 import { addStar } from './star';
 
 // const LONG_PRESS_MILLISECONDS = 500;
@@ -46,7 +46,6 @@ export function addKeys() {
     ]),
   };
 
-  const incrementScore = addScore();
   let music: AudioPlay | undefined;
 
   (directions as DirectionKey[]).forEach((key) => {
