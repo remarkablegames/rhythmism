@@ -1,6 +1,6 @@
 {
   "name": "rhythmism",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "Rhythmism is a web rhythm game.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
