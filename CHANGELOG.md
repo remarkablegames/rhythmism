@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/remarkablegames/rhythmism/compare/v1.2.0...v1.2.1) (2024-02-18)
+
+
+### Bug Fixes
+
+* decrease area hitbox of keys ([d65e8fa](https://github.com/remarkablegames/rhythmism/commit/d65e8fa54587c2aa596fb2f8fecd08dd3bc6f209))
+* **levels:** improve directions in tranquil-wave.json ([96c356b](https://github.com/remarkablegames/rhythmism/commit/96c356ba8d0eeb133b8dc441b215d076f38569ac))
+
 ## [1.2.0](https://github.com/remarkablegames/rhythmism/compare/v1.1.0...v1.2.0) (2024-02-18)
 
 
