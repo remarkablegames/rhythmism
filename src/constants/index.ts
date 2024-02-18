@@ -26,6 +26,7 @@ export enum Scene {
 
 export enum Sprite {
   background = 'background',
+  star = 'star',
 }
 
 export enum Sound {

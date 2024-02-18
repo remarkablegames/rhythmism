@@ -2,6 +2,7 @@ import { Direction, Key, Scene, Sound, Sprite } from '../constants';
 
 scene(Scene.preload, () => {
   loadSprite(Sprite.background, 'sprites/background/guitar-city.png');
+  loadSprite(Sprite.star, 'sprites/star.png');
 
   Object.values(Direction).forEach((direction) => {
     loadSprite(direction, `sprites/${direction}.png`);

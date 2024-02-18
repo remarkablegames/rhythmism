@@ -1,12 +1,17 @@
 import type { AudioPlay } from 'kaboom';
 
-import { DirectionKey, directions, Key, Sound, Tag } from '../constants';
+import {
+  DirectionKey,
+  directions,
+  Key,
+  Sound,
+  Sprite,
+  Tag,
+} from '../constants';
 import { getPosition } from '../helpers';
 import { addScore } from './score';
 
 // const LONG_PRESS_MILLISECONDS = 500;
-
-loadSprite('star', 'sprites/star.png');
 
 export function addKeys() {
   const keyMap = {
@@ -53,9 +58,8 @@ export function addKeys() {
   (directions as DirectionKey[]).forEach((key) => {
     onCollideUpdate(key, Tag.direction, () => {
       if (isKeyPressed(key)) {
-        //addKaboom(center());
         add([
-          sprite('star'),
+          sprite(Sprite.star),
           pos(center()),
           anchor('center'),
           scale(0.4),
