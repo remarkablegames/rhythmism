@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/remarkablegames/rhythmism/compare/v1.0.0...v1.0.1) (2024-02-18)
+
+
+### Bug Fixes
+
+* don't show github corners below 600px ([bab745e](https://github.com/remarkablegames/rhythmism/commit/bab745e9d4e3de24a25ccbdaaf6c3964132e2201))
+
 ## 1.0.0 (2024-02-18)
 
 
