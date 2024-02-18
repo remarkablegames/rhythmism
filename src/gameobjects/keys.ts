@@ -50,12 +50,8 @@ export function addKeys() {
       }
     });
 
-    const releaseMap: Record<string, number> = {};
-
     onKeyPress(key, () => {
       keyMap[key].opacity = 1;
-
-      releaseMap[key] = Date.now();
       play(Sound.score, {
         volume: 0.5,
       });
