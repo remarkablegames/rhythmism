@@ -7,7 +7,7 @@
 ![release](https://img.shields.io/github/v/release/remarkablegames/rhythmism)
 [![build](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml)
 
-🎶 Rhythmism is a web rhythm game.
+🎶 Rhythmism is a web rhythm game. Read the [blog post](https://remarkablegames.org/posts/rhythmism/).
 
 The game was made for the [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), which the theme was `Divergence`:
 
