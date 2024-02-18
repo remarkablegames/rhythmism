@@ -1,7 +1,7 @@
 import type { Key as KaboomKey } from 'kaboom';
 
 import { DirectionKey, Key, Sound, Tag } from '../constants';
-import { getPosition, isDirectionKeyPressed } from '../helpers';
+import { getArea, getPosition, isDirectionKeyPressed } from '../helpers';
 import { incrementScore } from './score';
 import { addStar } from './star';
 
@@ -73,7 +73,7 @@ function addKeyObject(key: DirectionKey) {
     sprite(Key[key]),
     getPosition(key),
     anchor('center'),
-    area(),
+    getArea(),
     opacity(0.5),
     Tag[key],
   ]);

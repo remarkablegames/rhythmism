@@ -1,3 +1,4 @@
+export * from './area';
 export * from './hitAccuracy';
 export * from './keys';
 export * from './position';

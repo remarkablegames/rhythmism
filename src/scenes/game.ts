@@ -7,7 +7,7 @@ import {
   Tag,
 } from '../constants';
 import { addKeys, addPause, addScore, addTimer } from '../gameobjects';
-import { getPosition } from '../helpers';
+import { getArea, getPosition } from '../helpers';
 import { volumeSlider } from '../helpers/volumeSlider';
 import { levels } from '../levels';
 
@@ -53,7 +53,6 @@ scene(Scene.game, (levelId: string) => {
           area(),
           anchor('bot'),
           offscreen({ destroy: true }),
-          'note',
         ]);
       }
 
@@ -61,11 +60,10 @@ scene(Scene.game, (levelId: string) => {
         sprite(Direction[direction as DirectionKey]),
         getPosition(direction as DirectionKey, -60),
         move(DOWN, 250),
-        area(),
+        getArea(),
         anchor('center'),
         offscreen({ destroy: true }),
         Tag.direction,
-        'note',
       ]);
     });
   });
