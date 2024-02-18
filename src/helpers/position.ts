@@ -4,12 +4,12 @@ export function getPosition(
 ) {
   switch (direction) {
     case 'left':
-      return pos(50, y);
+      return pos(60, y);
     case 'down':
-      return pos(130, y);
+      return pos(140, y);
     case 'up':
-      return pos(210, y);
+      return pos(220, y);
     case 'right':
-      return pos(290, y);
+      return pos(300, y);
   }
 }
