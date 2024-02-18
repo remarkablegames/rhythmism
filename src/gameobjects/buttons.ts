@@ -10,6 +10,7 @@ export function addButton(txt: string, position: Vec2, callback: () => void) {
     anchor('center'),
     outline(4),
     color(),
+    opacity(0.8),
   ]);
 
   // add a child object that displays the text
