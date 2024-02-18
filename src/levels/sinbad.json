@@ -3,7 +3,7 @@
   "title": "Sinbad",
   "author": "emex",
   "difficulty": "easy",
-  "background": "https://www.paulwheeler.us/files/windows-95-desktop-background.jpg",
+  "background": "sprites/background/guitar-city.png",
   "music": ["sounds/sinbad.webm", "sounds/sinbad.mp3"],
   "volume": 1.0,
   "offset": -2.0,
