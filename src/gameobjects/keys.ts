@@ -53,11 +53,14 @@ export function addKeys() {
   (directions as DirectionKey[]).forEach((key) => {
     onCollideUpdate(key, Tag.direction, () => {
       if (isKeyPressed(key)) {
+        //addKaboom(center());
         add([
           sprite('star'),
-          pos(70, 70),
+          pos(center()),
+          anchor('center'),
           scale(0.4),
-          lifespan(0.09, { fade: 0.5 }),
+          lifespan(0.03, { fade: 0.5 }),
+          opacity(1),
         ]);
         incrementScore();
       }
