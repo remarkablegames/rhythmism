@@ -1,6 +1,8 @@
-import { Direction, Key, Scene, Sound } from '../constants';
+import { Direction, Key, Scene, Sound, Sprite } from '../constants';
 
 scene(Scene.preload, () => {
+  loadSprite(Sprite.background, 'sprites/background/guitar-city.png');
+
   Object.values(Direction).forEach((direction) => {
     loadSprite(direction, `sprites/${direction}.png`);
   });

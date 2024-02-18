@@ -22,7 +22,6 @@ scene(Scene.game, (levelId: string) => {
     sprite(Sprite.background),
     pos(width() / 2, height() / 2),
     anchor('center'),
-    scale(1),
   ]);
 
   const music = play(Sound.music, {
