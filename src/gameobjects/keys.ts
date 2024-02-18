@@ -1,7 +1,7 @@
 import type { Key as KaboomKey } from 'kaboom';
 
 import { DirectionKey, Key, Sound, Tag } from '../constants';
-import { getPosition } from '../helpers';
+import { getPosition, isDirectionKeyPressed } from '../helpers';
 import { incrementScore } from './score';
 import { addStar } from './star';
 
@@ -10,7 +10,7 @@ export function addKeys() {
 
   Object.entries(keyObjects).forEach(([key, keyObject]) => {
     onCollideUpdate(key, Tag.direction, () => {
-      if (isKeyPressed(key as DirectionKey) || keyObject.isClicked()) {
+      if (isDirectionKeyPressed(key) || keyObject.isClicked()) {
         addStar();
         incrementScore();
       }
@@ -51,41 +51,30 @@ export function addKeys() {
 }
 
 function addKeyObjects() {
+  const up = addKeyObject('up');
+  const left = addKeyObject('left');
+  const down = addKeyObject('down');
+  const right = addKeyObject('right');
+
   return {
-    left: add([
-      sprite(Key.left),
-      getPosition('left'),
-      anchor('center'),
-      area(),
-      opacity(0.5),
-      Tag.left,
-    ]),
-
-    down: add([
-      sprite(Key.down),
-      getPosition('down'),
-      anchor('center'),
-      area(),
-      opacity(0.5),
-      Tag.down,
-    ]),
-
-    up: add([
-      sprite(Key.up),
-      getPosition('up'),
-      anchor('center'),
-      area(),
-      opacity(0.5),
-      Tag.up,
-    ]),
-
-    right: add([
-      sprite(Key.right),
-      getPosition('right'),
-      anchor('center'),
-      area(),
-      opacity(0.5),
-      Tag.right,
-    ]),
+    up,
+    left,
+    down,
+    right,
+    w: up,
+    a: left,
+    s: down,
+    d: right,
   } as const;
+}
+
+function addKeyObject(key: DirectionKey) {
+  return add([
+    sprite(Key[key]),
+    getPosition(key),
+    anchor('center'),
+    area(),
+    opacity(0.5),
+    Tag[key],
+  ]);
 }
