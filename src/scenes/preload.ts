@@ -13,7 +13,6 @@ scene(Scene.preload, () => {
   });
 
   loadSound(Sound.score, 'sounds/score.mp3');
-  loadSound(Sound.longPress, 'sounds/longPress.mp3');
 
   go(Scene.start);
 });
