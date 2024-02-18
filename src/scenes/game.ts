@@ -11,7 +11,6 @@ import { getPosition } from '../helpers';
 import { volumeSlider } from '../helpers/volumeSlider';
 import { levels } from '../levels';
 
-const TIME_OFFSET = -2.0;
 const TARGET_AREA_Y = 540;
 
 scene(Scene.game, (levelId: string) => {
@@ -36,15 +35,14 @@ scene(Scene.game, (levelId: string) => {
 
   music.paused = true;
 
-  volumeSlider(music);
+  volumeSlider(music, level.volume);
   addKeys();
   addTimer();
 
   addPause(game, music);
 
-  // @ts-expect-error duration hasn't been added to every JSON
   level.directions.forEach(({ direction, time, duration }) => {
-    game.wait(time + TIME_OFFSET, () => {
+    game.wait(time + level.offset, () => {
       if (duration > 0.1) {
         game.add([
           getPosition(direction as 'left' | 'right' | 'down' | 'up', -80),
