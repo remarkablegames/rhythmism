@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/remarkablegames/rhythmism/compare/v1.1.0...v1.2.0) (2024-02-18)
+
+
+### Features
+
+* add support for WASD keys ([07e5f43](https://github.com/remarkablegames/rhythmism/commit/07e5f43b5062caecfe36683d15bfe3315f8deb21))
+
 ## [1.1.0](https://github.com/remarkablegames/rhythmism/compare/v1.0.2...v1.1.0) (2024-02-18)
 
 
