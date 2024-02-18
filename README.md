@@ -34,8 +34,8 @@ Play the game on:
 ## Ideation
 
 - [Excalidraw](https://excalidraw.com/#json=4xsd2WQeFiejrdBQkalCR,GLv9eoVsLsWhkXYKI1gCLA)
-- [Prototype 1](https://replit.com/@remarkablemark/Rhythm-Game)
-- [Prototype 2](https://replit.com/@remarkablemark/Rhythm-Jam-2024)
+- [Proof of Concept](https://replit.com/@remarkablemark/Rhythm-Game)
+- [MVP](https://replit.com/@remarkablemark/Rhythm-Jam-2024)
 
 ## Stack
 
