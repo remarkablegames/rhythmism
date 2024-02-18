@@ -7,8 +7,6 @@ export enum Direction {
 
 export type DirectionKey = 'left' | 'down' | 'up' | 'right';
 
-export const directions = Object.keys(Direction);
-
 export enum Key {
   left = 'keys/GreyLeftArrow',
   down = 'keys/GreyDownArrow',

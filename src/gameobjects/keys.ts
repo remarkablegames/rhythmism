@@ -1,10 +1,47 @@
-import { DirectionKey, directions, Key, Sound, Tag } from '../constants';
+import type { Key as KaboomKey } from 'kaboom';
+
+import { DirectionKey, Key, Sound, Tag } from '../constants';
 import { getPosition } from '../helpers';
 import { incrementScore } from './score';
 import { addStar } from './star';
 
 export function addKeys() {
-  const keyMap = {
+  const keyObjects = addKeyObjects();
+
+  Object.entries(keyObjects).forEach(([key, keyObject]) => {
+    onCollideUpdate(key, Tag.direction, () => {
+      if (isKeyPressed(key as DirectionKey) || keyObject.isClicked()) {
+        addStar();
+        incrementScore();
+      }
+    });
+  });
+
+  onKeyPress(handlePress);
+  onKeyRelease(handleRelease);
+
+  function handlePress(key: KaboomKey) {
+    const keyObject = keyObjects[key as keyof typeof keyObjects];
+    if (!keyObject) {
+      return;
+    }
+    keyObject.opacity = 1;
+    play(Sound.score, {
+      volume: 0.5,
+    });
+  }
+
+  function handleRelease(key: KaboomKey) {
+    const keyObject = keyObjects[key as keyof typeof keyObjects];
+    if (!keyObject) {
+      return;
+    }
+    keyObject.opacity = 0.5;
+  }
+}
+
+function addKeyObjects() {
+  return {
     left: add([
       sprite(Key.left),
       getPosition('left'),
@@ -41,24 +78,4 @@ export function addKeys() {
       Tag.right,
     ]),
   };
-
-  (directions as DirectionKey[]).forEach((key) => {
-    onCollideUpdate(key, Tag.direction, () => {
-      if (isKeyPressed(key)) {
-        addStar();
-        incrementScore();
-      }
-    });
-
-    onKeyPress(key, () => {
-      keyMap[key].opacity = 1;
-      play(Sound.score, {
-        volume: 0.5,
-      });
-    });
-
-    onKeyRelease(key, () => {
-      keyMap[key].opacity = 0.5;
-    });
-  });
 }
