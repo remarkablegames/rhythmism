@@ -26,10 +26,10 @@ export function addTimer() {
 
   onKeyRelease((key) => {
     const time = getTime();
+    const previousDirection = map[key];
     const direction = {
-      direction: key,
-      time,
-      duration: Number((time - map[key].time).toFixed(1)),
+      ...previousDirection,
+      duration: Number((time - previousDirection.time).toFixed(1)),
     };
 
     if (debug.inspect) {
