@@ -4,7 +4,7 @@ import { DirectionKey, directions, Key, Sound, Tag } from '../constants';
 import { getPosition } from '../helpers';
 import { addScore } from './score';
 
-const LONG_PRESS_MILLISECONDS = 500;
+// const LONG_PRESS_MILLISECONDS = 500;
 
 loadSprite('star', 'sprites/star.png');
 
@@ -74,13 +74,13 @@ export function addKeys() {
       });
     });
 
-    onKeyDown(key, () => {
-      if (!music && Date.now() - releaseMap[key] > LONG_PRESS_MILLISECONDS) {
-        music = play(Sound.longPress, {
-          volume: 0.5,
-        });
-      }
-    });
+    // onKeyDown(key, () => {
+    //   if (!music && Date.now() - releaseMap[key] > LONG_PRESS_MILLISECONDS) {
+    //     music = play(Sound.longPress, {
+    //       volume: 0.5,
+    //     });
+    //   }
+    // });
 
     onKeyRelease(key, () => {
       keyMap[key].opacity = 0.5;
