@@ -1,11 +1,7 @@
-import type { AudioPlay } from 'kaboom';
-
 import { DirectionKey, directions, Key, Sound, Tag } from '../constants';
 import { getPosition } from '../helpers';
 import { incrementScore } from './score';
 import { addStar } from './star';
-
-// const LONG_PRESS_MILLISECONDS = 500;
 
 export function addKeys() {
   const keyMap = {
@@ -46,8 +42,6 @@ export function addKeys() {
     ]),
   };
 
-  let music: AudioPlay | undefined;
-
   (directions as DirectionKey[]).forEach((key) => {
     onCollideUpdate(key, Tag.direction, () => {
       if (isKeyPressed(key)) {
@@ -67,21 +61,8 @@ export function addKeys() {
       });
     });
 
-    // onKeyDown(key, () => {
-    //   if (!music && Date.now() - releaseMap[key] > LONG_PRESS_MILLISECONDS) {
-    //     music = play(Sound.longPress, {
-    //       volume: 0.5,
-    //     });
-    //   }
-    // });
-
     onKeyRelease(key, () => {
       keyMap[key].opacity = 0.5;
-
-      if (music) {
-        music.paused = true;
-        music = undefined;
-      }
     });
   });
 }
