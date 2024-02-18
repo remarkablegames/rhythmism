@@ -2,7 +2,7 @@ import { Scene, Sound, Sprite } from '../constants';
 import { loadSounds } from '../helpers';
 import { levels } from '../levels';
 
-scene(Scene.load, async (levelId) => {
+scene(Scene.load, async (levelId: string) => {
   add([text('Loading...'), anchor('center'), pos(center()), color(0, 0, 0)]);
 
   const level = levels[levelId];
