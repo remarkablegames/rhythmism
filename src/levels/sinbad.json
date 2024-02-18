@@ -3,6 +3,7 @@
   "title": "Sinbad",
   "author": "emex",
   "difficulty": "easy",
+  "color": "lightslategray",
   "background": "sprites/background/guitar-city.png",
   "music": ["sounds/sinbad.webm", "sounds/sinbad.mp3"],
   "volume": 1.0,

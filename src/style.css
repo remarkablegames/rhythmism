@@ -11,6 +11,10 @@ body {
   overflow: hidden;
 }
 
+body {
+  background: lightgrey;
+}
+
 canvas {
   position: absolute;
   top: 50%;

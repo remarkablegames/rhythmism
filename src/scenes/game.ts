@@ -15,7 +15,7 @@ const TARGET_AREA_Y = 540;
 
 scene(Scene.game, (levelId: string) => {
   const level = levels[levelId];
-
+  document.body.style.backgroundColor = level.color;
   const game = add([timer()]);
 
   game.add([

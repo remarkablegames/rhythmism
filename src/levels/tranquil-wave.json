@@ -3,6 +3,7 @@
   "title": "Tranquil Wave",
   "author": "emex",
   "difficulty": "hard",
+  "color": "lightgoldenrodyellow",
   "background": "sprites/background/beach.png",
   "music": ["sounds/tranquil-wave.webm", "sounds/tranquil-wave.mp3"],
   "volume": 0.5,
