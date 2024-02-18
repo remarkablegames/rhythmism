@@ -1,4 +1,11 @@
-# rhythmism
+<p align="center">
+  <img src="https://raw.githubusercontent.com/remarkablegames/rhythmism/master/public/screenshots/sinbad1.png" alt="rhythmism" width="360">
+</p>
+
+# Rhythmism
+
+![release](https://img.shields.io/github/v/release/remarkablegames/rhythmism)
+[![build](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml)
 
 🎶 Rhythmism is a web rhythm game.
 
@@ -13,7 +20,7 @@ Play the game on:
 ## Credits
 
 - [remarkablemark](https://github.com/remarkablemark) - Programmer, UI
-- [Rob Cohen](https://github.com/rmacohen) - Programmer, UI
+- [Rob Cohen](https://github.com/rmacohen) - Programmer, UI, Art
 - [SG-SWE073](https://github.com/SG-SWE073) - Programmer, UI, Art
 - [Gina Castromonte](https://github.com/GinaCastromonte) - Programmer
 - [emex](https://soundcloud.com/emex-music) - Music
