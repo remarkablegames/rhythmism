@@ -1,13 +1,30 @@
 import type { AudioPlay, GameObj, TimerComp, TweenController } from 'kaboom';
 
+import { Scene } from '../constants';
+import { addButton } from './button';
+
 export function addPause(game: GameObj<TimerComp>, music: AudioPlay) {
   let curTween: TweenController;
 
   onKeyPress((key) => {
-    if (!['escape', 'p'].includes(key)) {
-      return;
+    if (['escape', 'p'].includes(key)) {
+      togglePause();
     }
+  });
 
+  const pauseMenu = add([
+    rect(340, 300),
+    color(255, 255, 255),
+    outline(4),
+    anchor('center'),
+    pos(center().add(0, 700)),
+  ]);
+  pauseMenu.hidden = true;
+
+  addButton(pauseMenu, 'Resume', vec2(0, -50), togglePause);
+  addButton(pauseMenu, 'Exit', vec2(0, 50), () => go(Scene.start));
+
+  function togglePause() {
     music.paused = !music.paused;
     game.paused = !game.paused;
 
@@ -30,24 +47,5 @@ export function addPause(game: GameObj<TimerComp>, music: AudioPlay) {
         pauseMenu.hidden = true;
       });
     }
-  });
-
-  const pauseMenu = add([
-    rect(300, 400),
-    color(255, 255, 255),
-    outline(4),
-    anchor('center'),
-    pos(center().add(0, 700)),
-  ]);
-
-  pauseMenu.hidden = true;
-
-  pauseMenu.add([
-    text('Paused', {
-      size: 36,
-    }),
-    color(0, 0, 0),
-    center(),
-    anchor('center'),
-  ]);
+  }
 }
