@@ -1,4 +1,4 @@
-export * from './buttons';
+export * from './button';
 export * from './keys';
 export * from './pause';
 export * from './score';
