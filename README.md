@@ -17,6 +17,7 @@ Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/rhythmism/)
 - [Itch.io](https://remarkablegames.itch.io/rhythmism)
+- [Newgrounds](https://www.newgrounds.com/portal/view/918614)
 
 ## Credits
 
