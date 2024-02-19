@@ -3,15 +3,19 @@ import { addButton } from '../gameobjects';
 import { levels } from '../levels';
 
 scene(Scene.start, () => {
-  add([
+  const background = add([
     sprite(Sprite.background),
     pos(width() / 2, height() / 2),
     anchor('center'),
   ]);
 
-  Object.keys(levels).forEach((levelId, index) => {
-    addButton(levels[levelId].title, vec2(center().x, 100 * (index + 1)), () =>
+  let buttonY = -50;
+
+  Object.entries(levels).forEach(([levelId, level]) => {
+    addButton(background, level.title, vec2(0, buttonY), () =>
       go(Scene.load, levelId),
     );
+
+    buttonY += 100;
   });
 });

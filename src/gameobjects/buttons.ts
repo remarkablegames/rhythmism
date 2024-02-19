@@ -1,8 +1,13 @@
-import type { Vec2 } from 'kaboom';
+import type { GameObj, Vec2 } from 'kaboom';
 
-export function addButton(txt: string, position: Vec2, callback: () => void) {
+export function addButton(
+  gameObj: GameObj,
+  txt: string,
+  position: Vec2,
+  callback: () => void,
+) {
   // add a parent background object
-  const button = add([
+  const button = gameObj.add([
     rect(300, 80, { radius: 8 }),
     pos(position),
     area(),
