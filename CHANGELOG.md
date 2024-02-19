@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/remarkablegames/rhythmism/compare/v1.2.1...v1.3.0) (2024-02-19)
+
+
+### Features
+
+* **gameobjects:** add resume and exit buttons to pause menu ([c295f78](https://github.com/remarkablegames/rhythmism/commit/c295f78309544948f62d01d7ee204d18b070229d))
+
 ## [1.2.1](https://github.com/remarkablegames/rhythmism/compare/v1.2.0...v1.2.1) (2024-02-18)
 
 
