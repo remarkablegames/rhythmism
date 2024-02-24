@@ -1,17 +1,17 @@
 export enum Direction {
-  left = 'directions/PurpleLeftArrow',
-  down = 'directions/BlueDownArrow',
-  up = 'directions/GreenUpArrow',
-  right = 'directions/RedRightArrow',
+  left = 'directions/left',
+  down = 'directions/down',
+  up = 'directions/up',
+  right = 'directions/right',
 }
 
 export type DirectionKey = 'left' | 'down' | 'up' | 'right';
 
 export enum Key {
-  left = 'keys/GreyLeftArrow',
-  down = 'keys/GreyDownArrow',
-  up = 'keys/GreyUpArrow',
-  right = 'keys/GreyRightArrow',
+  left = 'keys/left',
+  down = 'keys/down',
+  up = 'keys/up',
+  right = 'keys/right',
 }
 
 export enum Scene {
