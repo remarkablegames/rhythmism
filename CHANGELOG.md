@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/remarkablegames/rhythmism/compare/v1.3.0...v1.3.1) (2024-02-24)
+
+
+### Performance Improvements
+
+* **sprites:** optimize background guitar-city.png ([b9475e3](https://github.com/remarkablegames/rhythmism/commit/b9475e3dc554f499f5093c7e6d651dbf950a3e14))
+
 ## [1.3.0](https://github.com/remarkablegames/rhythmism/compare/v1.2.1...v1.3.0) (2024-02-19)
 
 
