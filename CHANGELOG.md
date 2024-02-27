@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/remarkablegames/rhythmism/compare/v1.3.1...v1.3.2) (2024-02-27)
+
+
+### Continuous Integration
+
+* **github:** upload to itch.io in workflow release-please.yml ([21db692](https://github.com/remarkablegames/rhythmism/commit/21db692d7df442eed5a811c9985a07f63141cd99))
+
 ## [1.3.1](https://github.com/remarkablegames/rhythmism/compare/v1.3.0...v1.3.1) (2024-02-24)
 
 
