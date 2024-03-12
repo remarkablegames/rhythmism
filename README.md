@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/remarkablegames/rhythmism/master/public/screenshots/sinbad1.png" alt="rhythmism" width="360">
+  <img src="https://raw.githubusercontent.com/remarkablegames/rhythmism/master/public/screenshots/sinbad1.png" alt="Rhythmism" width="360">
 </p>
 
 # Rhythmism
