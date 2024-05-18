@@ -9,7 +9,7 @@
 
 🎶 Rhythmism is a web rhythm game. Read the [blog post](https://remarkablegames.org/posts/rhythmism/).
 
-The game was made for the [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), which the theme was `Divergence`:
+The game was made for [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), which the theme was `Divergence`:
 
 > a difference between two or more things, attitudes, or opinions.
 
