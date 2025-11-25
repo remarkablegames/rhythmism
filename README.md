@@ -4,7 +4,7 @@
 
 # Rhythmism
 
-![release](https://img.shields.io/github/v/release/remarkablegames/rhythmism)
+[![release](https://img.shields.io/github/v/release/remarkablegames/rhythmism)](https://github.com/remarkablegames/rhythmism/releases)
 [![build](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml)
 
 🎶 Rhythmism is a web rhythm game. Read the [blog post](https://remarkablegames.org/posts/rhythmism/).
