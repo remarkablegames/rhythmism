@@ -1,6 +1,6 @@
 import type { Key as KaboomKey } from 'kaboom';
 
-import { DirectionKey, Key, Sound, Tag } from '../constants';
+import { DirectionKey, Key, Tag } from '../constants';
 import { getArea, getPosition, isDirectionKeyPressed } from '../helpers';
 import { incrementScore } from './score';
 import { addStar } from './star';
@@ -36,9 +36,7 @@ export function addKeys() {
       return;
     }
     keyObject.opacity = 1;
-    play(Sound.score, {
-      volume: 0.5,
-    });
+    // Disabled sound on keypress below
   }
 
   function handleRelease(key: KaboomKey) {
