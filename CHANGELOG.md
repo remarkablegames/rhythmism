@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.3 (2026-07-23)
+
+
+### Miscellaneous Chores
+
+* release 1.3.3 ([798fafb](https://github.com/remarkablegames/rhythmism/commit/798fafbada7f3bdab14b5d5d09bb9dc403696313))
+
 ## [1.3.3](https://github.com/remarkablegames/rhythmism/compare/v1.3.2...v1.3.3) (2025-05-12)
 
 ### Miscellaneous Chores
