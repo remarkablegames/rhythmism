@@ -9,14 +9,14 @@
 
 🎶 Rhythmism is a web rhythm game. Read the [blog post](https://remarkablegames.org/posts/rhythmism/).
 
-The game was made for [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), which the theme was `Divergence`:
+The game was made for [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), which the theme was **Divergence**:
 
 > a difference between two or more things, attitudes, or opinions.
 
 Play the game on:
 
 - [itch.io](https://remarkablegames.itch.io/rhythmism)
-- [newgrounds](https://www.newgrounds.com/portal/view/918614)
+- [Newgrounds](https://www.newgrounds.com/portal/view/918614)
 - [remarkablegames](https://remarkablegames.org/rhythmism/)
 
 ## Credits
@@ -96,7 +96,7 @@ Your game is ready to be deployed!
 
 Builds the game and packages it into a Zip file in the `dist` folder.
 
-Your game can be uploaded to your server, [Itch.io](https://itch.io/), [Newgrounds](https://www.newgrounds.com/), etc.
+Your game can be uploaded to your server, [itch.io](https://itch.io/), [Newgrounds](https://www.newgrounds.com/), etc.
 
 ## License
 
