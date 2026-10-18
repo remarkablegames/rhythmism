@@ -4,7 +4,7 @@ import { levels } from '../levels';
 
 scene(Scene.start, () => {
   const background = add([
-    sprite(Sprite.background),
+    sprite(Sprite.background, { width: 360, height: 480 }),
     pos(width() / 2, height() / 2),
     anchor('center'),
   ]);

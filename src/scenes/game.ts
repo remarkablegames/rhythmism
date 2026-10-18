@@ -19,7 +19,7 @@ scene(Scene.game, (levelId: string) => {
   const game = add([timer()]);
 
   game.add([
-    sprite(Sprite.background),
+    sprite(Sprite.background, { width: 360, height: 480 }),
     pos(width() / 2, height() / 2),
     anchor('center'),
   ]);

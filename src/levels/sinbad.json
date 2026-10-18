@@ -4,7 +4,7 @@
   "author": "emex",
   "difficulty": "easy",
   "color": "lightslategray",
-  "background": "sprites/background/guitar-city.png",
+  "background": "sprites/background/guitarist.jpeg",
   "music": ["sounds/sinbad.webm", "sounds/sinbad.mp3"],
   "volume": 1.0,
   "offset": -2.0,
