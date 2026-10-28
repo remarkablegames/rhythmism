@@ -9,10 +9,11 @@ permissions:
   pull-requests: write
 
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
 
     steps:
       - name: Release Please
@@ -21,10 +22,13 @@ jobs:
         with:
           release-type: node
 
-  publish:
-    needs: release-please
-    runs-on: ubuntu-latest
-    if: ${{ needs.release-please.outputs.release_created }}
+  itch:
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     steps:
       - name: Checkout repository
@@ -37,18 +41,93 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: npm ci --prefer-offline
+        run: npm ci --prefer-offline --ignore-scripts
 
-      - name: Read package version
-        run: echo "VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
-
-      - name: Build
+      - name: Build game
         run: npm run bundle
+
+      - name: Get variables
+        id: vars
+        shell: bash
+        run: |
+          echo "app_name=$(jq -r .short_name public/manifest.webmanifest)" >> "$GITHUB_OUTPUT"
+          echo "window_title=$(jq -r .name public/manifest.webmanifest)" >> "$GITHUB_OUTPUT"
+          echo "version=$(jq -r .version package.json)" >> "$GITHUB_OUTPUT"
+          echo "platform=$(echo $RUNNER_OS | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_OUTPUT"
 
       - name: Setup butler
         uses: remarkablegames/setup-butler@v3
 
-      - name: Upload to itch.io
-        run: butler push dist ${{ github.repository }}:html5 --userversion ${{ env.VERSION }}
+      - name: Upload web build
+        if: runner.os == 'Linux'
+        working-directory: dist
+        run: |
+          butler push . $GITHUB_REPOSITORY:html5 --userversion ${{ steps.vars.outputs.version }}
+          zip -r web.zip .
+          gh release upload ${{ needs.release.outputs.tag_name }} web.zip
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        continue-on-error: true
+
+      - name: Build app
+        uses: remarkablemark/tauri-action@v1
+        id: tauri
+        with:
+          app-name: ${{ steps.vars.outputs.app_name }}
+          app-version: ${{ steps.vars.outputs.version }}
+          window-title: ${{ steps.vars.outputs.window_title }}
+          icon-path: public/logo.svg
+        env:
+          APPLE_SIGNING_IDENTITY: '-'
+
+      - name: Upload app to itch.io
+        run: >
+          butler push
+          ${{ steps.tauri.outputs.bundle-path }}
+          ${{ github.repository }}:${{ steps.vars.outputs.platform }}
+          --userversion ${{ steps.vars.outputs.version }}
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+
+      - name: Upload Release Artifact
+        working-directory: ${{ steps.tauri.outputs.bundle-path }}
+        shell: bash
+        run: |
+          if [[ $RUNNER_OS == 'Windows' ]]; then
+            7z a -r $PLATFORM.zip ./*
+          else
+            zip -r $PLATFORM.zip .
+          fi
+          gh release upload ${{ needs.release.outputs.tag_name }} $PLATFORM.zip
+        env:
+          PLATFORM: ${{ steps.vars.outputs.platform }}
+          GH_TOKEN: ${{ github.token }}
+
+  wavedash:
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Use Node.js
+        uses: actions/setup-node@v7
+        with:
+          cache: npm
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --ignore-scripts
+
+      - name: Build game
+        run: npm run bundle
+
+      - name: Upload to Wavedash
+        uses: remarkablegames/wavedash-action@v2
+        with:
+          token: ${{ secrets.WAVEDASH_TOKEN }}
+          game-id: ${{ secrets.WAVEDASH_GAME_ID }}
+          build-message: ${{ needs.release.outputs.tag_name }}
