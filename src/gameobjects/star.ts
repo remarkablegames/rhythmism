@@ -1,4 +1,4 @@
-import type { GameObj, ScaleComp } from 'kaboom';
+import type { GameObj, ScaleComp } from 'kaplay';
 
 import { Sprite } from '../constants';
 

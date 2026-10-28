@@ -29,7 +29,7 @@ scene(Scene.game, (levelId: string) => {
   });
 
   music.onEnd(() => {
-    go(Scene.start);
+    go(Scene.menu);
   });
 
   music.paused = true;

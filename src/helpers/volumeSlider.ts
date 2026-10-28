@@ -1,4 +1,4 @@
-import type { AudioPlay } from 'kaboom';
+import type { AudioPlay } from 'kaplay';
 
 const x = 250;
 const y = 15;

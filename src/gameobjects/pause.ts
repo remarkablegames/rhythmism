@@ -1,4 +1,4 @@
-import type { AudioPlay, GameObj, TimerComp, TweenController } from 'kaboom';
+import type { AudioPlay, GameObj, TimerComp, TweenController } from 'kaplay';
 
 import { Scene } from '../constants';
 import { addButton } from './button';
@@ -23,7 +23,7 @@ export function addPause(game: GameObj<TimerComp>, music: AudioPlay) {
 
   addButton(pauseMenu, 'Resume', vec2(0, -50), togglePause);
   addButton(pauseMenu, 'Exit', vec2(0, 50), () => {
-    go(Scene.start);
+    go(Scene.menu);
   });
 
   function togglePause() {

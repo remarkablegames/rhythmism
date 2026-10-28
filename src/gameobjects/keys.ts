@@ -1,4 +1,4 @@
-import type { Key as KaboomKey } from 'kaboom';
+import type { Key as KaplayKey } from 'kaplay';
 
 import { type DirectionKey, Key, Sound, Tag } from '../constants';
 import { getArea, getPosition, isDirectionKeyPressed } from '../helpers';
@@ -18,19 +18,19 @@ export function addKeys() {
 
     onMousePress('left', () => {
       if (keyObject.isClicked()) {
-        handlePress(key as DirectionKey);
+        handlePress(key);
       }
     });
 
     onMouseRelease(() => {
-      handleRelease(key as DirectionKey);
+      handleRelease(key);
     });
   });
 
   onKeyPress(handlePress);
   onKeyRelease(handleRelease);
 
-  function handlePress(key: KaboomKey) {
+  function handlePress(key: KaplayKey) {
     const keyObject = keyObjects[key as keyof typeof keyObjects];
     if (!keyObject) {
       return;
@@ -43,7 +43,7 @@ export function addKeys() {
     }
   }
 
-  function handleRelease(key: KaboomKey) {
+  function handleRelease(key: KaplayKey) {
     const keyObject = keyObjects[key as keyof typeof keyObjects];
     if (!keyObject) {
       return;

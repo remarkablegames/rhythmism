@@ -1,4 +1,4 @@
-import type { GameObj, TextComp } from 'kaboom';
+import type { GameObj, TextComp } from 'kaplay';
 
 let score: GameObj<TextComp>;
 

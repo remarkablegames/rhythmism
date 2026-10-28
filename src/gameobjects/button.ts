@@ -1,4 +1,4 @@
-import type { GameObj, Vec2 } from 'kaboom';
+import type { GameObj, Vec2 } from 'kaplay';
 
 export function addButton(
   gameObj: GameObj,

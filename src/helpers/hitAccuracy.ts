@@ -1,4 +1,4 @@
-import type { Vec2 } from 'kaboom';
+import type { Vec2 } from 'kaplay';
 
 import { AccuracyRadii } from '../constants';
 

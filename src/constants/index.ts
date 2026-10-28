@@ -17,9 +17,9 @@ export enum Key {
 export enum Scene {
   game = 'game',
   load = 'load',
+  menu = 'menu',
   pause = 'pause',
   preload = 'preload',
-  start = 'start',
 }
 
 export enum Sprite {

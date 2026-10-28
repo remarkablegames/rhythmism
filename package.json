@@ -14,7 +14,7 @@
     "start": "vite --open"
   },
   "dependencies": {
-    "kaboom": "3000.1.17"
+    "kaplay": "3001.0.19"
   },
   "devDependencies": {
     "@commitlint/cli": "21.2.4",
