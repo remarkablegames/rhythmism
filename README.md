@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/screenshots/sinbad1.png" alt="Rhythmism" width="360">
+  <img src="screenshots/sinbad1.png" alt="Rhythmism" width="360">
 </p>
 
 # Rhythmism
