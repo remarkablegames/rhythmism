@@ -1,7 +1,7 @@
 {
   "name": "Rhythmism",
   "short_name": "Rhythmism",
-  "description": "🎶 Rhythmism is a web rhythm game.",
+  "description": "🎶 Rhythmism is a browser-based rhythm game.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

@@ -7,17 +7,40 @@
 [![release](https://img.shields.io/github/v/release/remarkablegames/rhythmism)](https://github.com/remarkablegames/rhythmism/releases)
 [![build](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml)
 
-🎶 Rhythmism is a web rhythm game. Read the [blog post](https://remarkablegames.org/posts/rhythmism/).
+🎶 Rhythmism is a browser-based rhythm game. Choose a track, then press the on-screen keys in time with the music as notes reach them. You can play with a keyboard or use touch controls on a touchscreen.
 
 The game was made for [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), which the theme was **Divergence**:
 
 > a difference between two or more things, attitudes, or opinions.
 
-Play the game on:
+Play in your browser:
 
 - [itch.io](https://remarkablegames.itch.io/rhythmism)
 - [Newgrounds](https://www.newgrounds.com/portal/view/918614)
 - [remarkablegames](https://remarkablegames.org/rhythmism/)
+
+Or download for desktop:
+
+- [Windows](https://github.com/remarkablegames/rhythmism/releases/latest/download/windows.zip)
+- [macOS](https://github.com/remarkablegames/rhythmism/releases/latest/download/macos.zip)
+- [Linux](https://github.com/remarkablegames/rhythmism/releases/latest/download/linux.zip)
+
+Read the [blog post](https://remarkablegames.org/posts/rhythmism/).
+
+## How to Play
+
+- Use the keyboard (WASD/arrow keys) or touchscreen to play
+- Press the matching key when an arrow reaches the target
+- Keep your inputs in sync with the beat and aim for a high score
+
+## Features
+
+- Browser-based rhythm gameplay
+- Keyboard and touchscreen controls
+- Multiple music tracks
+- Pause menu with resume and exit options
+- Music volume controls
+- Music and visuals built around the game's rhythm theme
 
 ## Credits
 
