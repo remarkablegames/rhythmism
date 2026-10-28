@@ -19,6 +19,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="src/style.css" />
 
     <!--
       GitHub Corners. See https://github.com/remarkablemark/github-corners
@@ -52,20 +53,5 @@
   <body>
     <noscript>You need to enable JavaScript to play this game.</noscript>
     <script type="module" src="src/main.ts"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script>
-      window['ga-disable-%VITE_GOOGLE_ANALYTICS_ID%'] = %DEV%;
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function () {
-        dataLayer.push(arguments);
-      };
-      gtag('js', new Date());
-      gtag('config', '%VITE_GOOGLE_ANALYTICS_ID%');
-    </script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=%VITE_GOOGLE_ANALYTICS_ID%"
-    ></script>
   </body>
 </html>

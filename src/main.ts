@@ -1,5 +1,4 @@
 import 'kaplay/global';
-import './style.css';
 
 import kaplay from 'kaplay';
 

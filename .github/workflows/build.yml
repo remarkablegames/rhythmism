@@ -32,12 +32,24 @@ jobs:
       - name: Type check
         run: npm run lint:tsc
 
-      - name: Build
-        run: npm run build -- --base /${{ github.event.repository.name }}/
-        env:
-          VITE_GOOGLE_ANALYTICS_ID: ${{ vars.GOOGLE_ANALYTICS_ID }}
+      - name: Page test
+        uses: remarkablemark/page-test-action@v1
+        with:
+          url: http://localhost:5173
+          start: npm start
+          wait-on: http://localhost:5173
 
-      - name: Deploy
+      - name: Build for GitHub Pages
+        run: npm run build -- --base /${{ github.event.repository.name }}/
+
+      - name: Inject Google Analytics
+        if: github.ref_name == 'master'
+        uses: remarkablemark/google-analytics-action@v1
+        with:
+          html-path: dist/index.html
+          measurement-id: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+
+      - name: Deploy to GitHub Pages
         if: github.ref_name == 'master'
         uses: remarkablemark/gitploy-action@v1
         with:
