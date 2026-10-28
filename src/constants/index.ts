@@ -41,7 +41,7 @@ export enum Tag {
   direction = 'direction',
 }
 
-export enum accuracyRadii {
+export enum AccuracyRadii {
   perfect = 10,
   excellent = 20,
   good = 30,

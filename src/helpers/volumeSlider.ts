@@ -76,5 +76,5 @@ export function volumeSlider(music: AudioPlay, defaultVolume = 1.0) {
 }
 
 function getText(percentage: number) {
-  return `Volume: ${percentage}`;
+  return `Volume: ${String(percentage)}`;
 }

@@ -1,18 +1,14 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-BUNDLE=true npm run build
+# build bundle
+BUNDLE=true npm run build -- --base=./
 
-# replace absolute URLs with relative URLs
-if [[ $(uname) == 'Darwin' ]]; then
-  sed -i '' -e 's|src="/|src="|g' -e 's|href="/|href="|g' dist/index.html
-else
-  sed -i -e 's|src="/|src="|g' -e 's|href="/|href="|g' dist/index.html
-fi
-
-# zip file
+# compress directory into single archive
 if [[ $CI != 'true' ]]; then
-  zip -r "dist/$(npm pkg get name | tr -d \")-$(npm pkg get version | tr -d \").zip" dist
+  NAME=$(npm pkg get name | tr -d \")
+  VERSION=$(npm pkg get version | tr -d \")
+  zip -r "dist/$NAME-$VERSION.zip" dist
   echo
-  find dist -type f -depth 1 -name '*.zip'
+  find dist -type f -name '*.zip'
   open dist
 fi

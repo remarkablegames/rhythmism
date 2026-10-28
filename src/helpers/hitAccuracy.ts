@@ -1,6 +1,6 @@
 import type { Vec2 } from 'kaboom';
 
-import { accuracyRadii } from '../constants';
+import { AccuracyRadii } from '../constants';
 
 type HitAccuracy = 'Perfect!' | 'Excellent!' | 'Good!' | 'Miss!';
 
@@ -13,12 +13,12 @@ export function calculateDistance(
   return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 }
 
-export function evaluateHit(distance: number): HitAccuracy {
-  if (distance <= accuracyRadii.perfect) {
+export function evaluateHit(distance: AccuracyRadii): HitAccuracy {
+  if (distance <= AccuracyRadii.perfect) {
     return 'Perfect!';
-  } else if (distance <= accuracyRadii.excellent) {
+  } else if (distance <= AccuracyRadii.excellent) {
     return 'Excellent!';
-  } else if (distance <= accuracyRadii.good) {
+  } else if (distance <= AccuracyRadii.good) {
     return 'Good!';
   } else {
     return 'Miss!';

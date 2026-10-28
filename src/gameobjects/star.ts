@@ -16,13 +16,17 @@ export function addStar(position = center()) {
     opacity(0.5),
   ]);
 
-  ka.wait(0.4 / speed, () => ka.use(boom(speed, size)));
-  ka.onDestroy(() => kaboom.destroy());
+  ka.wait(0.4 / speed, () => {
+    ka.use(boom(speed, size));
+  });
+  ka.onDestroy(() => {
+    kaboom.destroy();
+  });
 
   return kaboom;
 }
 
-function boom(speed: number = 2, size: number = 1) {
+function boom(speed = 2, size = 1) {
   let time = 0;
 
   return {

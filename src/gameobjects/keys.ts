@@ -1,6 +1,6 @@
 import type { Key as KaboomKey } from 'kaboom';
 
-import { DirectionKey, Key, Sound, Tag } from '../constants';
+import { type DirectionKey, Key, Sound, Tag } from '../constants';
 import { getArea, getPosition, isDirectionKeyPressed } from '../helpers';
 import { incrementScore } from './score';
 import { addStar } from './star';

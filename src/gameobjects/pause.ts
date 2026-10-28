@@ -4,7 +4,7 @@ import { Scene } from '../constants';
 import { addButton } from './button';
 
 export function addPause(game: GameObj<TimerComp>, music: AudioPlay) {
-  let curTween: TweenController;
+  let currentTween: TweenController;
 
   onKeyPress((key) => {
     if (['escape', 'p'].includes(key)) {
@@ -14,7 +14,7 @@ export function addPause(game: GameObj<TimerComp>, music: AudioPlay) {
 
   const pauseMenu = add([
     rect(340, 300),
-    color(255, 255, 255),
+    color(WHITE),
     outline(4),
     anchor('center'),
     pos(center().add(0, 700)),
@@ -22,28 +22,30 @@ export function addPause(game: GameObj<TimerComp>, music: AudioPlay) {
   pauseMenu.hidden = true;
 
   addButton(pauseMenu, 'Resume', vec2(0, -50), togglePause);
-  addButton(pauseMenu, 'Exit', vec2(0, 50), () => go(Scene.start));
+  addButton(pauseMenu, 'Exit', vec2(0, 50), () => {
+    go(Scene.start);
+  });
 
   function togglePause() {
     music.paused = !music.paused;
     game.paused = !game.paused;
 
-    if (curTween) {
-      curTween.cancel();
+    if (currentTween?.cancel) {
+      currentTween.cancel();
     }
 
-    curTween = tween(
+    currentTween = tween(
       pauseMenu.pos,
       game.paused ? center() : center().add(0, 700),
       1,
-      (p) => (pauseMenu.pos = p),
+      (value) => (pauseMenu.pos = value),
       easings.easeOutElastic,
     );
 
     if (game.paused) {
       pauseMenu.hidden = false;
     } else {
-      curTween.onEnd(() => {
+      currentTween.onEnd(() => {
         pauseMenu.hidden = true;
       });
     }

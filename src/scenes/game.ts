@@ -1,6 +1,6 @@
 import {
   Direction,
-  DirectionKey,
+  type DirectionKey,
   Scene,
   Sound,
   Sprite,

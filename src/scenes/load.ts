@@ -2,15 +2,15 @@ import { Scene, Sound, Sprite } from '../constants';
 import { loadSounds } from '../helpers';
 import { levels } from '../levels';
 
-scene(Scene.load, async (levelId: string) => {
-  add([text('Loading...'), anchor('center'), pos(center()), color(0, 0, 0)]);
+scene(Scene.load, (levelId: string) => {
+  add([text('Loading...'), anchor('center'), pos(center()), color(BLACK)]);
 
   const level = levels[levelId];
 
-  await Promise.all([
+  void Promise.all([
     loadSounds(Sound.music, level.music),
     loadSprite(Sprite.background, level.background),
-  ]);
-
-  go(Scene.game, levelId);
+  ]).then(() => {
+    go(Scene.game, levelId);
+  });
 });
