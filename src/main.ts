@@ -3,9 +3,11 @@ import 'kaplay/global';
 import kaplay from 'kaplay';
 
 kaplay({
-  background: [255, 255, 255],
+  background: [0, 0, 0, 0],
   width: 360,
   height: 480,
+  letterbox: true,
+  scale: 2,
 });
 
 const { start } = await import('./scenes');
