@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.0](https://github.com/remarkablegames/rhythmism/compare/v1.3.3...v1.4.0) (2026-10-29)
+
+### Features
+
+- stretch canvas to fill screen and set background color to black ([d1babf6](https://github.com/remarkablegames/rhythmism/commit/d1babf67e62b6f0b692b69c79856c0eaef72d26b))
+
 ## [1.3.3](https://github.com/remarkablegames/rhythmism/compare/v1.3.2...v1.3.3) (2025-05-12)
 
 ### Miscellaneous Chores
