@@ -15,6 +15,7 @@ The game was made for [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), wh
 
 Play in your browser:
 
+- [Wavedash](https://wavedash.com/games/rhythmism)
 - [itch.io](https://remarkablegames.itch.io/rhythmism)
 - [Newgrounds](https://www.newgrounds.com/portal/view/918614)
 - [remarkablegames](https://remarkablegames.org/rhythmism/)
