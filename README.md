@@ -26,7 +26,7 @@ Or download for desktop:
 - [macOS](https://github.com/remarkablegames/rhythmism/releases/latest/download/macos.zip)
 - [Linux](https://github.com/remarkablegames/rhythmism/releases/latest/download/linux.zip)
 
-Read the [blog post](https://remarkablegames.org/posts/rhythmism/).
+Read the [blog post](https://remarkablegames.org/posts/rhythmism/) or watch the [YouTube video](https://youtu.be/hLwIFLooWCg).
 
 ## How to Play
 
