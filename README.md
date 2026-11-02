@@ -7,7 +7,7 @@
 [![release](https://img.shields.io/github/v/release/remarkablegames/rhythmism)](https://github.com/remarkablegames/rhythmism/releases)
 [![build](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/rhythmism/actions/workflows/build.yml)
 
-🎶 Rhythmism is a browser-based rhythm game. Choose a track, then press the on-screen keys in time with the music as notes reach them. You can play with a keyboard or use touch controls on a touchscreen.
+🎶 **Rhythmism** is a browser-based rhythm game. Choose a track, then press the on-screen keys in time with the music as notes reach them. You can play with a keyboard or use touch controls on a touchscreen.
 
 The game was made for [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), which the theme was **Divergence**:
 
