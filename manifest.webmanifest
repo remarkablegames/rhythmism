@@ -1,0 +1,22 @@
+{
+  "name": "Rhythmism",
+  "short_name": "Rhythmism",
+  "description": "🎶 Rhythmism is a browser-based rhythm game.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    }
+  ]
+}
